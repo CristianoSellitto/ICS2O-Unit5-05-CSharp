@@ -72,7 +72,7 @@ class Program
             Console.Clear();
             enterSide2();
         }
-      
+
         enterSide1();
     }
 }
