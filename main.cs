@@ -25,9 +25,12 @@ class Program
             {
                 Console.Clear();
                 Console.WriteLine("Please enter a valid number.");
-                enterSide1();
+                enterSide3();
             }
-            Console.Clear();
+            else
+            {
+                Console.Clear();
+            }
         }
 
         void enterSide2()
@@ -43,10 +46,13 @@ class Program
             {
                 Console.Clear();
                 Console.WriteLine("Please enter a valid number.");
-                enterSide1();
+                enterSide2();
             }
-            Console.Clear();
-            enterSide3();
+            else
+            {
+                Console.Clear();
+                enterSide3();
+            }
         }
 
         void enterSide1()
@@ -64,8 +70,11 @@ class Program
                 Console.WriteLine("Please enter a valid number.");
                 enterSide1();
             }
-            Console.Clear();
-            enterSide2();
+            else
+            {
+                Console.Clear();
+                enterSide2();
+            }
         }
 
         enterSide1();
