@@ -21,6 +21,12 @@ class Program
                 Console.WriteLine("Please enter a valid number.");
                 enterSide3();
             }
+            if (side3 > 0)
+            {
+                Console.Clear();
+                Console.WriteLine("Please enter a valid number.");
+                enterSide1();
+            }
             Console.Clear();
         }
 
@@ -33,6 +39,12 @@ class Program
                 Console.WriteLine("Please enter a valid number.");
                 enterSide2();
             }
+            if (side2 > 0)
+            {
+                Console.Clear();
+                Console.WriteLine("Please enter a valid number.");
+                enterSide1();
+            }
             Console.Clear();
             enterSide3();
         }
@@ -41,6 +53,12 @@ class Program
         {
             Console.Write("Enter side length 1: ");
             while (!float.TryParse(Console.ReadLine(), out side1))
+            {
+                Console.Clear();
+                Console.WriteLine("Please enter a valid number.");
+                enterSide1();
+            }
+            if (side1 > 0)
             {
                 Console.Clear();
                 Console.WriteLine("Please enter a valid number.");
