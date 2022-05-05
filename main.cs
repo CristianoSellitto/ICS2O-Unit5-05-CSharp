@@ -20,7 +20,7 @@ class Program
             Console.WriteLine("This triangle's sides are " + side1 + ", " + side2 + ", and " + side3 + ".");
             if (side1 == side2 && side2 == side3)
             {
-               Console.WriteLine("\nThis triangle is equilateral.");
+                Console.WriteLine("\nThis triangle is equilateral.");
             }
             else if (side1 == side2 && side2 != side3 || side2 == side3 && side3 != side1 || side1 == side3 && side3 != side2)
             {
@@ -28,10 +28,10 @@ class Program
             }
             else
             {
-              Console.WriteLine("\nThis triangle is scalene.");
+                Console.WriteLine("\nThis triangle is scalene.");
             }
         }
-      
+
         void enterSide3()
         {
             Console.Write("Enter side length 3: ");
