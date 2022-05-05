@@ -11,28 +11,6 @@ class Program
         float side1;
         float side2;
         float side3;
-        bool allsidesmatch;
-        bool twosidesmatch;
-
-        void findTriangleType()
-        {
-            Console.WriteLine("This triangle's sides are " + side1 + ", " + side2 + ", and " + side3 + ".");
-            allsidesmatch = (side1 == side2 && side2 == side3);
-            twosidesmatch = (side1 == side2 && side2 != side3 || side2 == side3 && side3 != side1 || side1 == side3 && side3 != side2);
-            if (allsidesmatch == true)
-            {
-                Console.WriteLine("\nThis triangle is equilateral.");
-            }
-            else if (twosidesmatch == true)
-            {
-                Console.WriteLine("\nThis triangle is isosceles.");
-            }
-            else
-            {
-                Console.WriteLine("\nThis triangle is scalene.");
-            }
-            Console.WriteLine("\nFinished.");
-        }
 
         void enterSide3()
         {
@@ -44,7 +22,6 @@ class Program
                 enterSide3();
             }
             Console.Clear();
-            findTriangleType();
         }
 
         void enterSide2()
@@ -74,5 +51,19 @@ class Program
         }
 
         enterSide1();
+        Console.WriteLine("This triangle's sides are " + side1 + ", " + side2 + ", and " + side3 + ".");
+        if (side1 == side2 && side2 == side3)
+        {
+           Console.WriteLine("\nThis triangle is equilateral.");
+        }
+        else if (side1 == side2 && side2 != side3 || side2 == side3 && side3 != side1 || side1 == side3 && side3 != side2)
+        {
+            Console.WriteLine("\nThis triangle is isosceles.");
+        }
+        else
+        {
+          Console.WriteLine("\nThis triangle is scalene.");
+        }
+        Console.WriteLine("\nFinished.");
     }
 }
