@@ -21,7 +21,7 @@ class Program
                 Console.WriteLine("Please enter a valid number.");
                 enterSide3();
             }
-            if (side3 > 0)
+            if (side3 < 0)
             {
                 Console.Clear();
                 Console.WriteLine("Please enter a valid number.");
@@ -39,7 +39,7 @@ class Program
                 Console.WriteLine("Please enter a valid number.");
                 enterSide2();
             }
-            if (side2 > 0)
+            if (side2 < 0)
             {
                 Console.Clear();
                 Console.WriteLine("Please enter a valid number.");
@@ -58,7 +58,7 @@ class Program
                 Console.WriteLine("Please enter a valid number.");
                 enterSide1();
             }
-            if (side1 > 0)
+            if (side1 < 0)
             {
                 Console.Clear();
                 Console.WriteLine("Please enter a valid number.");
