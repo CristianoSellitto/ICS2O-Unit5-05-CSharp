@@ -15,23 +15,6 @@ class Program
         bool hasCheckedSide2;
         bool hasCheckedSide3;
 
-        void calculate()
-        {
-            Console.WriteLine("This triangle's sides are " + side1 + ", " + side2 + ", and " + side3 + ".");
-            if (side1 == side2 && side2 == side3)
-            {
-                Console.WriteLine("\nThis triangle is equilateral.");
-            }
-            else if (side1 == side2 && side2 != side3 || side2 == side3 && side3 != side1 || side1 == side3 && side3 != side2)
-            {
-                Console.WriteLine("\nThis triangle is isosceles.");
-            }
-            else
-            {
-                Console.WriteLine("\nThis triangle is scalene.");
-            }
-        }
-
         void enterSide3()
         {
             Console.Write("Enter side length 3: ");
@@ -52,7 +35,6 @@ class Program
             else if (hasCheckedSide3 == false)
             {
                 Console.Clear();
-                calculate();
             }
             else
             {
@@ -123,6 +105,19 @@ class Program
         }
 
         enterSide1();
+        Console.WriteLine("This triangle's sides are " + side1 + ", " + side2 + ", and " + side3 + ".");
+        if (side1 == side2 && side2 == side3)
+        {
+            Console.WriteLine("\nThis triangle is equilateral.");
+        }
+        else if (side1 == side2 && side2 != side3 || side2 == side3 && side3 != side1 || side1 == side3 && side3 != side2)
+        {
+            Console.WriteLine("\nThis triangle is isosceles.");
+        }
+        else
+        {
+            Console.WriteLine("\nThis triangle is scalene.");
+        }
         Console.WriteLine("\nFinished.");
     }
 }
