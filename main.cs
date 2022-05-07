@@ -15,96 +15,81 @@ class Program
         bool hasCheckedSide2;
         bool hasCheckedSide3;
 
-        void enterSide3()
+        Console.Write("Enter side length 1: ");
+        hasCheckedSide1 = false;
+        while (!float.TryParse(Console.ReadLine(), out side1))
         {
-            Console.Write("Enter side length 3: ");
-            hasCheckedSide3 = false;
-            while (!float.TryParse(Console.ReadLine(), out side3))
-            {
-                hasCheckedSide3 = true;
-                Console.Clear();
-                Console.WriteLine("Please enter a valid number: This isn't a number!");
-                enterSide3();
-            }
-            if (side3 < 0 && hasCheckedSide3 == false)
-            {
-                Console.Clear();
-                Console.WriteLine("Please enter a valid number: This number is negative.");
-                enterSide3();
-            }
-            else if (hasCheckedSide3 == false)
-            {
-                Console.Clear();
-            }
-            else
-            {
-                Console.Clear();
-                Console.WriteLine("Please enter a valid number: Unknown Error");
-                enterSide3();
-            }
+            hasCheckedSide1 = true;
+            Console.Clear();
+            Console.WriteLine("Please enter a valid number: This isn't a number!");
+            Environment.Exit(0);
         }
-
-        void enterSide2()
+        if (side1 < 0 && hasCheckedSide1 == false)
         {
-            Console.Write("Enter side length 2: ");
-            hasCheckedSide2 = false;
-            while (!float.TryParse(Console.ReadLine(), out side2))
-            {
-                hasCheckedSide2 = true;
-                Console.Clear();
-                Console.WriteLine("Please enter a valid number: This isn't a number!");
-                enterSide2();
-            }
-            if (side2 < 0 && hasCheckedSide2 == false)
-            {
-                Console.Clear();
-                Console.WriteLine("Please enter a valid number: This number is negative.");
-                enterSide2();
-            }
-            else if (hasCheckedSide2 == false)
-            {
-                Console.Clear();
-                enterSide3();
-            }
-            else
-            {
-                Console.Clear();
-                Console.WriteLine("Please enter a valid number: Unknown Error");
-                enterSide2();
-            }
+            Console.Clear();
+            Console.WriteLine("Please enter a valid number: This number is negative.");
+            Environment.Exit(0);
         }
-
-        void enterSide1()
+        else if (hasCheckedSide1 == false)
         {
-            Console.Write("Enter side length 1: ");
-            hasCheckedSide1 = false;
-            while (!float.TryParse(Console.ReadLine(), out side1))
-            {
-                hasCheckedSide1 = true;
-                Console.Clear();
-                Console.WriteLine("Please enter a valid number: This isn't a number!");
-                enterSide1();
-            }
-            if (side1 < 0 && hasCheckedSide1 == false)
-            {
-                Console.Clear();
-                Console.WriteLine("Please enter a valid number: This number is negative.");
-                enterSide1();
-            }
-            else if (hasCheckedSide1 == false)
-            {
-                Console.Clear();
-                enterSide2();
-            }
-            else
-            {
-                Console.Clear();
-                Console.WriteLine("Please enter a valid number: Unknown Error");
-                enterSide1();
-            }
+            Console.Clear();
         }
-
-        enterSide1();
+        else
+        {
+            Console.Clear();
+            Console.WriteLine("Please enter a valid number: Unknown Error");
+            Environment.Exit(0);
+        }
+        Console.Write("Enter side length 2: ");
+        hasCheckedSide2 = false;
+        while (!float.TryParse(Console.ReadLine(), out side2))
+        {
+            hasCheckedSide2 = true;
+            Console.Clear();
+            Console.WriteLine("Please enter a valid number: This isn't a number!");
+            Environment.Exit(0);
+        }
+        if (side2 < 0 && hasCheckedSide2 == false)
+        {
+            Console.Clear();
+            Console.WriteLine("Please enter a valid number: This number is negative.");
+            Environment.Exit(0);
+        }
+        else if (hasCheckedSide2 == false)
+        {
+            Console.Clear();
+        }
+        else
+        {
+            Console.Clear();
+            Console.WriteLine("Please enter a valid number: Unknown Error");
+            Environment.Exit(0);
+        }
+        Console.Write("Enter side length 3: ");
+        hasCheckedSide3 = false;
+        while (!float.TryParse(Console.ReadLine(), out side3))
+        {
+            hasCheckedSide3 = true;
+            Console.Clear();
+            Console.WriteLine("Please enter a valid number: This isn't a number!");
+            Environment.Exit(0);
+        }
+        if (side3 < 0 && hasCheckedSide3 == false)
+        {
+            Console.Clear();
+            Console.WriteLine("Please enter a valid number: This number is negative.");
+            Environment.Exit(0);
+        }
+        else if (hasCheckedSide3 == false)
+        {
+            Console.Clear();
+        }
+        else
+        {
+            Console.Clear();
+            Console.WriteLine("Please enter a valid number: Unknown Error");
+            Environment.Exit(0);
+        }
         Console.WriteLine("This triangle's sides are " + side1 + ", " + side2 + ", and " + side3 + ".");
         if (side1 == side2 && side2 == side3)
         {
